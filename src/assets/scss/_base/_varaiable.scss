@@ -1,0 +1,9 @@
+//padding
+$padding15: 15px; //margin
+//font-size
+@mixin flex($align-items, $justify-content, $flex-direction) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+}

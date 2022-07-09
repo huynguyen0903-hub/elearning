@@ -1,0 +1,80 @@
+.container__details {
+  .header__background {
+    margin-top: 75px;
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      url(https://cdn2.topica.vn/5f990e55cb5acb5e85ce27a9/product/619bc79c6d05dc00250104b7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    .header__title {
+      * {
+        color: white;
+      }
+      .ant-breadcrumb {
+        font-size: large;
+      }
+      h1 {
+        font-size: 38px;
+        margin-left: 10px;
+      }
+      padding: 50px 60px 0px;
+    }
+  }
+  .main__details {
+    margin: auto;
+    @include flex(unset, flex-start, row);
+    width: 95vw;
+    background-color: #fafafa;
+    box-shadow: 0 0px 32px rgba(0, 0, 0, 0.2);
+
+    .topic {
+      padding: 30px 25px 0px;
+      background-color: #ffffff;
+      min-width: fit-content;
+      @include flex(center, flex-start, column);
+      input {
+        border: 2px solid #e8e8e8;
+        outline: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        line-height: 1.5;
+        transition: border-color 0.2s ease-in-out;
+        &:focus {
+          border-color: #444444;
+        }
+      }
+      ul {
+        margin-top: 25px;
+        list-style: none;
+        width: 100%;
+        @include flex(center, flex-start, column);
+        gap: 20px;
+        a {
+          text-align: center;
+          width: 100%;
+          color: black;
+          cursor: pointer;
+          padding: 15px 0px;
+          border-radius: 15px;
+          transition: all 0.5s ease;
+          &:hover {
+            font-weight: bold;
+            background-color: rgba(138, 63, 192, 0.391);
+          }
+        }
+      }
+    }
+    .content {
+      width: 100%;
+      padding: 25px;
+    
+    }
+  }
+}

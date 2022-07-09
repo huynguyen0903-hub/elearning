@@ -1,0 +1,20 @@
+/** @format */
+
+@import "./_components/SideBar";
+@import "./_components/Home.scss";
+@import "./_components/Header.scss";
+// @import "./_components/Footer.scss";
+@import "./_components/Details.scss";
+@import "./_components/CourseInfo";
+@import "./_components/RowCourses";
+@import "./_components/Checkout";
+@import "./_components/CartUser.scss";
+@import "./_components/Receipt";
+@import "./_components/_UserInfo";
+@import "_components/_CourseCard";
+//mixin
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,107 @@
+/** @format */
+
+@import "../../scss/_base/varaiable";
+.home__container {
+  width: 100vw;
+  padding: 75px 15px 0px;
+  color: #313c4b !important;
+  background: #fafafa; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   to right,
+  //   #e9e4f0,
+  //   #d3cce3
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   to right,
+  //   #e9e4f0,
+  //   #d3cce3
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  .mySwiper {
+    .swiper-button-next,
+    .swiper-button-prev {
+      box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.2);
+      color: #ffd472;
+      background-color: #fafafa;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      &::after {
+        font-size: 25px;
+      }
+      &.swiper-button-disabled {
+        display: none;
+      }
+    }
+    width: 100%;
+    box-shadow: 0 0px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    .swiper-wrapper {
+      .swiper-slide {
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .topic {
+    margin-top: 15px;
+    width: 100%;
+    padding: 0px 1%;
+    .swiper-wrapper {
+      padding: 2%;
+      .swiper-slide {
+        box-shadow: 0px 0px 15px rgba(158, 158, 158, 0.5);
+        width: 10vw;
+        height: 15vh;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        @include flex(center, center, column);
+        &.green {
+          background-color: #cdf0ea;
+        }
+        &.pink {
+          background-color: #f6c6ea;
+        }
+        &.yellow {
+          background-color: #faf4b7;
+        }
+        &.purple {
+          background-color: #c499ba;
+        }
+        &.navy {
+          background-color: #1f4690;
+        }
+        &.ef8354 {
+          background-color: #f47c49;
+        }
+        &.c2ffe6 {
+          background-color: #c2ffe6;
+        }
+        &:hover {
+          transform: scale(1.1);
+          opacity: 1;
+        }
+        i {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  .main__content {
+    padding: 15px 0px;
+    .list__courses {
+      .list__courses__wrapper {
+        .row {
+          padding: 0px 15px;
+        }
+        * ~ * {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}

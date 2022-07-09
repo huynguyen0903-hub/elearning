@@ -1,0 +1,42 @@
+@import"../../../assets/scss/_base/varaiable";
+.footer__container {
+  padding: 1% 5%;
+  @include flex(unset, flex-start, row);
+  background-color: black;
+
+  h3 {
+    cursor: pointer;
+  }
+  span {
+    cursor: pointer;
+  }
+  h3,
+  span {
+    &:hover {
+      text-decoration: underline;
+    }
+    padding: 5px 0px;
+    color: white;
+  }
+  .about {
+    @include flex(top, flex-start, column);
+
+    flex: 1;
+  }
+  .community {
+    @include flex(top, flex-start, column);
+
+    flex: 1;
+  }
+  .address {
+    @include flex(top, flex-start, column);
+    flex: 1;
+  }
+
+  .app {
+    flex: 1;
+    img {
+      width: 100%;
+    }
+  }
+}

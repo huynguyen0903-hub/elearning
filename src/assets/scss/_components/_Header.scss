@@ -1,0 +1,158 @@
+/** @format */
+
+.header {
+  padding: 0px 5%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 75px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.437);
+  backdrop-filter: blur(35px);
+
+  @include flex(center, unset, row);
+  transition: all 0.2s ease-in-out;
+  &.header-width {
+    height: 105px;
+  }
+  .lable {
+    margin: 0px 0px 0px 25px;
+    font-weight: 800;
+    font-size: 38px;
+    cursor: pointer;
+    color: #111111;
+  }
+  .menuHeader {
+    background-color: transparent;
+    border-radius: 15px;
+    border: transparent;
+  }
+  .search__input {
+    padding: 1% 1%;
+    line-height: 1.5;
+    width: 25vw;
+    outline: none;
+    border: 2px solid #e8e8e8;
+    border-radius: 20px;
+    transition: border-color 0.2s ease-in-out;
+    &:focus {
+      border-color: #444444;
+    }
+  }
+  .cart__wrapper {
+    position: relative;
+    &::after {
+      content: "";
+      background-color: transparent;
+      position: absolute;
+      bottom: -10%;
+      left: -1px;
+      width: 100%;
+      height: 30%;
+    }
+    .anticon-shopping-cart {
+      @include flex(center, center, row);
+
+      font-size: 38px;
+      height: 75px;
+      width: 75px;
+      svg {
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        cursor: pointer;
+        svg {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .cart__container {
+      @include flex(center, center, column);
+      text-align: center;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      transform: translateX(-50%);
+      background-color: #ffffff;
+      border-radius: 15px;
+      width: 300px;
+      height: 100px;
+      padding: 15px;
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+  .user__wrapper {
+    position: relative;
+    .anticon-user {
+      height: 75px;
+      width: 75px;
+      font-size: 38px;
+      cursor: pointer;
+      @include flex(center, center, row);
+      &:hover {
+        background-color: rgba($color: #111111, $alpha: 0.3);
+      }
+      svg {
+        z-index: -1;
+      }
+    }
+    .modalUser__container {
+      box-shadow: 0 0px 32px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 25px;
+      width: 220px;
+      @include flex(flex-start, unset, column);
+      text-align: left;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #ffffff;
+      .avatar {
+        @include flex(center, flex-start, row);
+        height: 75px;
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          margin-right: 15px;
+        }
+        .name {
+          &:hover {
+            cursor: pointer;
+            font-weight: bold;
+          }
+        }
+      }
+      hr {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 0.5px;
+      }
+      span {
+        padding: 25px 0px;
+        text-decoration: none !important;
+        color: black;
+        cursor: pointer;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+      button {
+        font-size: large;
+        transition: all 0.3s ease;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: darkviolet;
+        color: white;
+        border: none;
+        padding: 10px 35px;
+        margin-top: 15px;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}

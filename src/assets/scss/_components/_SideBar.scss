@@ -1,0 +1,57 @@
+@import "../_base/varaiable";
+.sidebar__container {
+  min-width: 15vw;
+  display: none;
+  min-height: 100vh;
+  .logo {
+    @include flex(center, center, column);
+    min-height: 150px;
+    text-align: center;
+    color: #111111;
+    i {
+      font-size: 50px;
+    }
+    h1 {
+      font-weight: 700px;
+    }
+  }
+  .options {
+    padding-top: 65px;
+    .options__inner {
+      @include flex(center, flex-start, column);
+      list-style: none;
+
+      button {
+        margin-bottom: 25px;
+        .innerButton {
+          @include flex(center, flex-start, row);
+          i {
+            font-size: large;
+          }
+          span {
+            margin-left: 1%;
+            font-size: large;
+          }
+        }
+
+        &.active {
+          transition: all 0.3s ease-in-out;
+          background-color: white;
+          transform: scale(1.1);
+        }
+        position: relative;
+        width: 90%;
+        text-align: center;
+        color: black;
+        padding: $padding15 51px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
